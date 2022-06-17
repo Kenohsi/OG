@@ -1,0 +1,25 @@
+{
+  "name": "ordergreen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kenohsi/OG.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kenohsi/OG/issues"
+  },
+  "homepage": "https://github.com/Kenohsi/OG#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express.js": "^1.0.0",
+    "firebase-admin": "^11.0.0",
+    "nodemon": "^2.0.16"
+  }
+}
