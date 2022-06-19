@@ -26,6 +26,11 @@ app.get('/signup', (req, res)=>{
     res.sendFile(path.join(staticPath, "signup.html"));
 })
 
+//shop route
+app.get('/shop', (req, res)=>{
+    res.sendFile(path.join(staticPath, "shop.html"));
+})
+
 app.post('/signup', (req, res)=>{
     console.log(req.body);
     res.json('data received');
