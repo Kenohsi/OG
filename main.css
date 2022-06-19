@@ -11,7 +11,7 @@ html {
 main{
 
 
-  background-image: url("Pictures/Fresh-Foods-Presentatfdion-Slides.jpg");
+  background-image: url("Fresh-Foods-Presentatfdion-Slides.jpg");
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
  
@@ -247,4 +247,19 @@ div#contentOfBox {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+h1 {
+  color: green;
+  
+}
+h2 {
+  color: green;
+}
+.p {
+  color: black;
+  font-size: 120%;
+}
+
+h3,p {
+  font-size: 120%;
 }
