@@ -14,7 +14,7 @@ const app = express();
 
 //middleware
 app.use(express.static(staticPath));
-
+app.use(express.json());
 
 //routes, home Route
 app.get("/", (req, res) => {
@@ -26,6 +26,10 @@ app.get('/signup', (req, res)=>{
     res.sendFile(path.join(staticPath, "signup.html"));
 })
 
+app.post('/signup', (req, res)=>{
+    console.log(req.body);
+    res.json('data received');
+})
 
 ///404route
 app.get('/404',(req, res) =>{
