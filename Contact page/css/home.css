@@ -208,3 +208,27 @@ opacity: 1;
     text-transform: capitalize;
     font-weight: bold;
 }
+
+.search {
+    color: green;
+}
+.search-btn {
+    color: white;
+    background-color: green;
+}
+footer{ 
+    color:white
+}
+
+/* .footer-links:visited {
+    color: white;
+}
+.nav a:link {
+    color: white;
+}
+.nav a:visited {
+    color: white;
+}
+.links-container {
+    color: gray;
+} */
