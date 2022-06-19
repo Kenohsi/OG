@@ -10,6 +10,9 @@ const password = document.querySelector ('#password');
 
 //submit form
 submitBtn.addEventListener('click',()=>{
+    if (name.value) {
+        
+    }
 sendData('/signup',{
     name: name.value,
     email: email.value,
