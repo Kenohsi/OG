@@ -2,13 +2,13 @@ const createNav = () =>{
     let nav = document.querySelector('.navbar');
 
     nav.innerHTML = `<div class = " nav " >
-    <img src = "ordergreen.jpg" class = " logo " alt = " " >
+    <img src = "pictures/ordergreen.jpg" class = " logo " alt = " " >
     <div class ="nav-items">
         <div class = "search">
             <input type = "text" class="search-box" placeholder="search brand, product">
             <button class = "search-btn">Search</button>
         </div>
-        <a href = "#"><img src=cart.png alt=""></a>
+        <a href = "#"><img src ="pictures/cart.png alt=""></a>
     </div>
 </div>
     <ul class ="links-container">
