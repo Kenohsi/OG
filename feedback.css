@@ -3,10 +3,7 @@ h1 {
     color: rgb(19, 193, 94);
     font: 3em sans-serif;
 }
-.logo{
-    position:absolute; 
-    top:0px;
-}
+
 h3{
     text-align: center;
     color: #026b1c;
@@ -15,11 +12,7 @@ h3{
 h4{ 
     font-style: italic;
 }
-nav {
-    grid-area: n;
-    padding: 8px;
-    
-}
+
 a {
     color: black;
 }
@@ -44,7 +37,7 @@ li {
 }
 body{
     background-color: white;
-    opacity: 0.7;
+    
    font-weight: bold;
    
 }
@@ -80,7 +73,7 @@ fieldset > legend {
     margin: 10px;
 }
 
-button:last-child {
+.sendbutton {
     box-shadow: 0px -3px 0px 0px #f0f7fa;
 	background:linear-gradient(to bottom, #33ef65 5%, #01d240 100%);
 	background-color:#33ef84;

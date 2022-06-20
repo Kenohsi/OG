@@ -1,9 +1,11 @@
 footer{
     position: relative;
+    /* bottom: 0%; */
     width: 100%;
     padding: 40px 10vw;
     padding-bottom: 80px;
-    background: green;
+    background: rgb(104, 182, 104);
+
 }
 .footer-content{
     display: flex;
