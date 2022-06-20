@@ -3,14 +3,19 @@ const express = require('express');
 const admin = require('firebase-admin');
 const bcrypt = require('bcrypt');
 const path = require('path');
+//init express.js
+const app = express();
 
+app.listen(3000,() => {
+    console.log('listening on port 3000.....');
+    
+    })
 
 
 //decl. static path
 let staticPath = path.join(__dirname);
 
-//init express.js
-const app = express();
+
 
 //middleware
 app.use(express.static(staticPath));
@@ -47,7 +52,3 @@ app.use((req, res)=>{
 
 })
 
-app.listen(3000,() => {
-console.log('listening on port 3000.....');
-
-})
