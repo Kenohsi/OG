@@ -1,0 +1,103 @@
+h1 {
+    text-align: center;
+
+    font: 3em sans-serif;
+}
+
+h3{
+    text-align: center;
+
+    font-size: medium;
+}
+h4{ 
+    font-style: italic;
+}
+
+a {
+
+}
+
+a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/* Remove bullet points from list items and safe space */
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+li {
+    padding: 8px;
+    float: right;
+    font: 1em sans-serif;
+}
+body{
+
+    
+   font-weight: bold;
+   
+}
+
+textarea {
+    width: 100%;
+}
+
+fieldset {
+    box-sizing: border-box;
+    border-style: groove;
+    border-radius: 6px;
+    padding: 5px 5px 5px;
+    margin-bottom: 10px;
+
+}
+
+@media screen and (max-width:400px) {
+    body {
+        font-size: smaller;
+        
+    }
+}
+
+fieldset > legend {
+
+    font-size: 17px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+#personal-info {
+    padding: 20px;
+    margin: 10px;
+}
+
+.sendbutton {
+
+
+
+
+
+	display:inline-block;
+	cursor:pointer;
+
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:12px 76px;
+	text-decoration:none;
+
+}
+
+#personal-info button {
+
+    border-radius: 10px;
+    width: 100%;
+    font-size: large;
+    margin-bottom: 0;
+}
+table.unstyledTable {
+    text-align: center;
+}
+

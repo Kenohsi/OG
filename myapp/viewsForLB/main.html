@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ordergreen</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/home.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar"></nav>
+
+
+
+  <h1>Ordergreen:</h1>
+  <br>
+  <br>
+
+  <article>
+    <h3>-Sustainable </h3>
+    <h3>-Green </h3>
+    <h3>-Awesome </h3>
+
+
+    <h2>Find out our best offers </h2>
+
+    <button class="logout-btn" type="button" onclick="loadDoc()">Click me</button>
+    <br><br>
+    <table id="demo"></table>
+
+    <script>
+
+      function loadDoc() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function () {
+          myFunction(this);
+        }
+        xhttp.open("GET", "note.xml");
+        xhttp.send();
+      }
+      function myFunction(xml) {
+        const xmlDoc = xml.responseXML;
+        const x = xmlDoc.getElementsByTagName("CD");
+        let table = "<tr><th>Fruit</th><th>PRICE</th></tr>";
+        for (let i = 0; i < x.length; i++) {
+          table += "<tr><td>" +
+            x[i].getElementsByTagName("FRUIT")[0].childNodes[0].nodeValue +
+            "</td><td>" +
+            x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue +
+            "</td></tr>";
+        }
+        document.getElementById("demo").innerHTML = table;
+      }
+    </script>
+
+    <br><br>
+    <h1>Meet our Enviroment friendly Online-Shop</h1>
+    <br>
+
+
+    <br><br>
+    <ul>
+      <li>CO2 free delivery service
+      </li>
+      <br>
+      <br>
+      <li>Fresh and healthy products
+      </li>
+      <br><br>
+      <li>Time saving and convenient shopping
+      </li>
+      <br><br>
+      <li>Most importantly Fair-Trade
+      </li>
+    </ul>
+
+  </article>
+  <br><br>
+  <br><br>
+  <h2>Look at this happy Farmer :)</h2>
+  <br>
+
+
+
+  <br>
+  <br>
+
+
+
+  <a id="about"></a>
+
+  <h1>Meet the Team:</h1>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="row">
+    <div class="column">
+      <div class="card">
+
+        <div class="container">
+          <h1>Kenan Husic</h1>
+          <p class="title">kennt sich ok aus &amp; versuchts zumindest</p><br>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p><br>
+          <a href="mailto:Kenan.Husic@ordergreen.com">Kenan.Husic@ordergreen.com</a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+
+        <div class="container">
+          <h1>Taha Muhammad Imran </h1>
+          <p class="title">Deliverer und Co chef</p>
+          <br>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <br>
+          <a href="mailto:Taha.Imran@ordergreen.com">Taha.Imran@ordergreen.com</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+
+        <div class="container">
+          <h1>Christina Ifrim</h1>
+          <p class="title">Designer</p><br>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p><br>
+          <a href="mailto:Christina.Ifrim@ordergreen.com">Christina.Ifrim@ordergreen.com</a>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="column">
+      <div class="card">
+
+        <div class="container">
+          <h1>Adam Ibragimov </h1>
+          <p class="title">Einfach chef</p><br>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p><br>
+          <a href="mailto:Adam.Ibragimov@ordergreen.com">Adam.Ibragimov@ordergreen.com</a><br>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  </section>
+  <br>
+
+  <br>
+
+  <br>
+
+
+
+
+
+  </main>
+  </div>
+
+
+  <footer>
+
+    <address>
+      ©Ordergreen<br>
+      Written by: <a href="mailto:janedoe@example.com">Team Ordergreen</a><br>
+      Visit us at: <a href="https://www.fh-campuswien.ac.at/">FH Campus Wien</a><br>
+      1100 Vienna, Austria
+    </address>
+
+  </footer>
+
+
+
+
+  <script src="js/home.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/footer.js"></script>
+</body>
+
+</html>

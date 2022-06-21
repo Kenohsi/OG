@@ -1,0 +1,40 @@
+footer{
+    position: relative;
+    /* bottom: 0%; */
+    width: 100%;
+    padding: 40px 10vw;
+    padding-bottom: 80px;
+    background: rgb(104, 182, 104);
+
+}
+.footer-content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+li{
+    float: left;
+    font: 1em sans-serif;
+    padding: 8px;
+
+}
+ul {
+    
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    padding: 10px;
+}
+
+footer{
+    float: left;
+    padding: 8px;
+}
+
+i{
+    float: left;
+    font: 1em sans-serif;
+    top: -10px
+   
+}
