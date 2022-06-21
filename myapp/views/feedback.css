@@ -1,0 +1,107 @@
+h1 {
+    text-align: center;
+    color: rgb(19, 193, 94);
+    font: 3em sans-serif;
+}
+
+h3{
+    text-align: center;
+    color: #026b1c;
+    font-size: medium;
+}
+h4{ 
+    font-style: italic;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/* Remove bullet points from list items and safe space */
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+li {
+    padding: 8px;
+    float: right;
+    font: 1em sans-serif;
+}
+body{
+    background-color: white;
+    
+   font-weight: bold;
+   
+}
+
+textarea {
+    width: 100%;
+}
+
+fieldset {
+    box-sizing: border-box;
+    border-style: groove;
+    border-radius: 6px;
+    padding: 5px 5px 5px;
+    margin-bottom: 10px;
+
+}
+
+@media screen and (max-width:400px) {
+    body {
+        font-size: smaller;
+        
+    }
+}
+
+fieldset > legend {
+    background-color: rgb(118, 226, 134);
+    font-size: 17px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+}
+#personal-info {
+    padding: 20px;
+    margin: 10px;
+}
+
+.sendbutton {
+    box-shadow: 0px -3px 0px 0px #f0f7fa;
+	background:linear-gradient(to bottom, #33ef65 5%, #01d240 100%);
+	background-color:green;
+	border-radius:9px;
+	border:1px solid #05d01d;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:12px 76px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b6178;
+}
+
+#personal-info button {
+    background-color: rgb(173, 230, 187);
+    border-radius: 10px;
+    width: 100%;
+    font-size: large;
+    margin-bottom: 0;
+}
+table.unstyledTable {
+    text-align: center;
+}
+
+button:hover {
+	background:linear-gradient(to bottom, #01d25c 5%, #33ef6b 100%);
+	background-color:#01d235;
+}

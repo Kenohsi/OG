@@ -1,0 +1,318 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+#bild {
+  padding-top: 5px;
+}
+
+main{
+
+
+  background-image: url("Fresh-Foods-Presentatfdion-Slides.jpg");
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+ 
+  background: cover;
+}
+
+#nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  background-color: #333;
+  position: -webkit-sticky; /* für safari es geht aber sowies nicht weil wir overflow benutzen anscheinend*/
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+}
+
+/* Three columns side by side */
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+#nav a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+nav a:visited {
+  color: white;
+}
+
+.navandmaindiv {
+
+  color: rgb(70, 67, 67);
+  grid-area: c2;
+  width: 100%;
+  display: block;
+
+}
+
+h3,a {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+main {
+  margin-bottom: 90px;
+}
+
+
+main {
+  overflow: hidden;
+  margin-bottom: 100px;
+
+}
+
+h1 {
+  display: inline;
+  font-style: italic;
+  font-weight: 2000;
+  font-size: xx-large;
+}
+
+
+header {
+  text-align: center;
+
+}
+
+body {
+
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: auto auto;
+  grid-template-areas:
+    "c1 c1"
+    "c2 c2"
+    "c3 c3"
+    "c4 c5"
+  ;
+  height: 100%;
+
+}
+
+.headerdiv {
+  grid-area: c1;
+  position: top;
+  top: 0;
+  background-color: green;
+  width: 100%;
+
+}
+
+
+main {
+  grid-area: c3;
+}
+
+aside {
+  grid-area: c4;
+  width: 60%;
+  float: right;
+  text-align: right;
+  margin-right: 10px;
+}
+
+footer {
+  grid-area: c4;
+  text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #11e783;
+  margin: 50px auto; /* 15% from the top and centered */
+  border: 10px solid rgb(2, 216, 31);
+  width: 50%; /* Could be more or less, depending on screen size */
+  height: 50%;
+padding: 80px;
+}
+
+
+/* The Close Button */
+.close {
+  /* Position it in the top right corner outside of the modal */
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: rgb(158, 70, 70);
+  font-size: 60px;
+  font-weight: bold;
+}
+
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+.signInButton {
+  /* display: inline-block; */
+  /* padding: 15px 25px; */
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  /* border-radius: 15px; */
+  /* box-shadow: 0 9px #999; */
+  /* margin: 30px; */
+  width: 49.99%;
+  float: left;
+}
+
+.cancelButtonInBoxDiv{
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #bd3131;
+  border: none;
+  /* border-radius: 15px; */
+  /* box-shadow: 0 9px #999; */
+  /* margin: 30px; */
+  width: 49.99%;
+  float: right;
+
+}
+
+div#contentOfBox {
+  /* align-content: center; */
+  align-items: center;
+  /* align-self: center; */
+  text-align: center;
+}
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+h1 {
+  color: green;
+  
+}
+h2 {
+  color: green;
+}
+.p {
+  color: black;
+  font-size: 120%;
+}
+
+h3,p {
+  font-size: 120%;
+}

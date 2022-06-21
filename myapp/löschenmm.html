@@ -19,16 +19,26 @@
 
         <!-- <p class="alert-msg">Error message</p> -->
     </div>
+<!-- <script>if (message.error()) {
+    document.write(message.error);
+} ; </script> -->
 
+    <form action="/login" method="POST">
     <div class="container">
+        <h1 id="id01">Old Heading</h1>
 
+        <!-- <script>
+            const element = document.getElementById("id01");
+            element.innerHTML = initialize.;
+            </script> -->
         <div>
             <input type="email" name="email" id="email" placeholder="email">
             <input type="password" name="password" autocomplete="off" id="password" placeholder="password">
-            <button class="submit-btn" name="submit">log in</button>
+            <button  type="submit" class="submit-btn" name="submit">log in</button>
         </div>
+    </form>
         <a href="signup.html" class="link">don't have an account? Create one</a>
-        <a href="home.html" class="link">Go Back</a>
+        <a href="main.html" class="link">Go Back</a>
     </div>
 
 
