@@ -1,11 +1,8 @@
-:root {
-  --primary-color: #5fbaa7;
-}
 
 
 
 body {
-  background-color: #f4f4f4;
+
   font-family: Arial, Helvetica, sans-serif;
   
   align-items: center;
@@ -15,26 +12,14 @@ body {
   padding: 20px;
 }
 
-h1 {
-  color: green;
-}
 
 p {
   text-align: center;
 }
 
-.btn {
-  color: #fff;
-  background: green;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 12px;
-  padding: 5px 12px;
-}
 
-.money-img {
-  width: 150px;
-}
+
+
 
 .currency {
   padding: 40px 0;
@@ -48,13 +33,13 @@ p {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  border: 1px solid #dedede;
+
   font-size: 16px;
 }
 
 .currency input {
   border: 0;
-  background: transparent;
+
   font-size: 30px;
   text-align: right;
 }

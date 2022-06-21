@@ -2,7 +2,7 @@ const createNav = () =>{
     let nav = document.querySelector('.navbar');
 
     nav.innerHTML = `<div class = " nav " >
-    <img src = "pictures/ordergreen.jpg" class = " logo " alt = " " >
+   
     <div class ="nav-items">
         <div class = "search">
             <input type = "text" class="search-box" placeholder="search brand, product">
@@ -11,7 +11,7 @@ const createNav = () =>{
   <button class = "logout-btn" type="submit">Log Out</button>
 </form>
         </div>
-        <a href = "#"><img src ="pictures/cart.png" alt=""></a>
+
     </div>
     </div>
     <ul class ="links-container">

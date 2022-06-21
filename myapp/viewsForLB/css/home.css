@@ -15,7 +15,7 @@ h1 {
     font-style: italic;
     font-weight: 2000;
     font-size: xx-large;
-    color: green;
+
 }
 
 /* Display the columns below each other instead of side by side on small screens */
@@ -27,9 +27,7 @@ h1 {
 }
 
 /* Add some shadows to create a card effect */
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
+
 
 /* Some left and right padding inside the container */
 .container {
@@ -45,7 +43,7 @@ h1 {
 }
 
 .title {
-    color: grey;
+ 
 }
 
 .button {
@@ -53,16 +51,12 @@ h1 {
     outline: 0;
     display: inline-block;
     padding: 8px;
-    color: white;
-    background-color: #000;
     text-align: center;
     cursor: pointer;
     width: 100%;
 }
 
-.button:hover {
-    background-color: #555;
-}
+
 
 .hero-section {
 
@@ -80,7 +74,7 @@ h1 {
     height: 250px;
     margin-top: 10px;
     text-align: center;
-    color: green;
+   
     text-transform: capitalize;
     font-size: 150px;
     font-weight: bolder;
@@ -98,7 +92,7 @@ h1 {
     font-weight: 500;
     margin-bottom: 40px;
     text-transform: capitalize;
-    color: green;
+   
 }
 
 .product-container {
@@ -134,9 +128,9 @@ h1 {
 
 .tag {
     position: absolute;
-    background: white;
+
     padding: 5px;
-    color: green;
+
     right: 10px;
     top: 10px;
     text-transform: capitalize;
@@ -152,16 +146,13 @@ h1 {
     text-transform: capitalize;
     border: none;
     outline: none;
-    background: #fff;
     border-radius: 5px;
     transition: 0.5s;
     cursor: pointer;
     opacity: 0;
 }
 
-.product-card:hover .card-button {
-    opacity: 1;
-}
+
 
 .product-info {
     width: 100%;
@@ -198,7 +189,6 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0)0%, white 100%);
     cursor: pointer;
     z-index: 8;
 
@@ -220,10 +210,7 @@ h1 {
     opacity: 0.2;
 }
 
-.previous-button:hover img,
-.next-button:hover img {
-    opacity: 1;
-}
+
 
 html,
 body {
@@ -266,9 +253,7 @@ body {
     opacity: 0.7;
 }
 
-.collection img:hover {
-    opacity: 1;
-}
+
 
 .collection p {
     position: absolute;
@@ -276,38 +261,25 @@ body {
     bottom: 50%;
     transform: translateX(-50%, -50%);
     text-align: center;
-    color: green;
+ 
     font-size: 50px;
     text-transform: capitalize;
     font-weight: bold;
 }
 
 .search {
-    color: green;
+ 
 }
 
 .search-btn {
-    color: white;
-    background-color: green;
+
 }
 
 footer {
-    color: white
-}
-
-th {
-
-
-    text-shadow: 2px 2px 5px rgb(10, 223, 63);
 
 }
 
-td {
 
-
-    text-shadow: 2px 2px 5px rgb(39, 192, 33);
-
-}
 
 /* .footer-links:visited {
     color: white;
