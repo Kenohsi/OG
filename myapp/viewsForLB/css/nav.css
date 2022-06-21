@@ -63,9 +63,7 @@ z-index :9;
     border-bottom-right-radius: 10px;
 }
 
-.search-box::placeholder{
-    color: green;   
-}
+
 
 .nav-items a{
     margin-left: 20px;
@@ -95,10 +93,7 @@ opacity: 0.5;
 transition: .5s;
 }
 
-.link:hover{
-    opacity: 1;
-    color: green;
-}
+
 
 .logout-btn {
     width: 100%;
