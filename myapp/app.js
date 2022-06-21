@@ -2,8 +2,7 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
 }
 
-
-const fs = require('fs');
+const fs = require('fs').promises;
 
 const path = require('path');
 let staticPath = path.join(__dirname,"views");
@@ -14,6 +13,7 @@ const passport = require('passport')
 const flash = require('express-flash')
 const session = require('express-session')
 const methodOverride = require('method-override')
+
 var counter=0;
 
 
@@ -38,7 +38,7 @@ const users = []
 
 
 app.engine('html', require('ejs').renderFile);
-// app.set('view-engine', 'ejs')
+// app.set('view-engine', 'html')
 app.use(express.urlencoded({ extended: false }))
 app.use(flash())
 app.use(session({
@@ -60,9 +60,9 @@ app.use(express.json())
   
 
 app.get('/', checkAuthenticated, (req, res) => {
+
   res.sendFile(path.join(staticPath, "main.html"));
 })
-// , { name: req.user.name }
 
 app.get('/login', checkNotAuthenticated, (req, res) => {
   res.sendFile(path.join(staticPath, "login.html"));
@@ -85,6 +85,11 @@ app.get('/signup', checkNotAuthenticated, (req, res) => {
 app.get("/", (req, res) => {
   res.sendFile(path.join(staticPath, "login.html"));
 })
+
+app.get("/ajax", (req, res) => {
+  res.sendFile(path.join(staticPath, "ajax.html"));
+})
+
 
 //signup route
 app.get('/signup', (req, res) => {
@@ -116,23 +121,34 @@ app.post('/signup', checkNotAuthenticated, async (req, res) => {
     const hashedPassword = await bcrypt.hash(req.body.password, 10)
 
     
-counter++;
-
+    counter++
     users.push({
       id: Date.now().toString(),
       name: req.body.name,
       email: req.body.email,
       password: hashedPassword
     })
-  //  var jsonData = 'USER '+counter+': name: '+ req.body.name+' email: '+req.body.email+' password: '+hashedPassword/n;
-   
 
-   //var jsonSave = JSON.parse( jsonData );
-  //  console.log(jsonData);
+    var jsonData = 'USER '+counter+': name: '+ req.body.name+' email: '+req.body.email+' password: '+hashedPassword;
+    
+    var str = JSON.stringify(jsonData ,undefined,  2 );
+
+    fs.appendFile('file.json', str, function(err) {
+      if (err) throw err;
+      console.log('complete');
+      }
+  );
+
+ // var key = ;
+  //delete json[key];
+
+
+  
 
 
 
-    // //jsonSave= jsonSave.append(jsonData)
+
+  //  jsonSave= jsonSave.append(jsonData)
     
     
 
@@ -148,29 +164,89 @@ counter++;
 
 
 
+    
+    
+    
+
+
+// stringify JSON Object
+//var jsonContent = JSON.stringify(jsonObj);
+//console.log(jsonContent);
+
+
+
+// await openFile(req.body.name,req.body.email,hashedPassword)
 
 
     res.redirect('/login')
   } catch {
     res.redirect('/signup')
-  } // saveData(users);
+  }  
+  // saveData(users);
 
-  // console.log(jsonData);
- // console.log(jsonSave);
-
+  //console.log(jsonSave);
 })
-// const saveData = (users) =>{
 
-//   // json data
-//   // var jsonData = '{"users":[{"name":"users.name","email":"users.email"}';
-//      //jsonData = JSON.stringify(users)
+
+
+
+
+
+
+// async function openFile(name, email, password) {
+//   try {
+//     // var jsonData = 'USER '+counter+': name: '+ name+' email: '+email+' password: '+password+'\\n';
+//     var jsonData = 'USER ';
+//     await fs.writeFile('file.json', jsonData);
+//     fs.readFile('file.json');
+//   } catch (error) {
+//     console.error(`Got an error trying to write to a file: ${error.message}`);
+//   }
+// }
+
+// async function addUser(name, email, password) {
+//   try {
+//     const csvLine = `\n${name},${email},${password}`
+//     await fs.writeFile('file.json', csvLine, { flag: 'a' });
+//   } catch (error) {
+//     console.error(`Got an error trying to write to a file: ${error.message}`);
+//   }
+// }
+
+// (async function () {
+//   await openFile(req.body.name,req.body.email,hashedPassword)
+//   //await addUser(req.body.name,req.body.email,hashedPassword);
+ 
+// })();
+
+
+const saveData = (users) =>{
+
+  // json data
+  // var jsonData = '{"users":[{"name":"users.name","email":"users.email"}';
+     //jsonData = JSON.stringify(users)
   
   
-//     console.log(users)
+    console.log(users);
     
   
-//     }
+    }
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 app.delete('/logout', function(req, res, next) {
   req.logout(function(err) {
