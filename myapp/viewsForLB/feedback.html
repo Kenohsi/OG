@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ContactUs</title>
+    <link rel="stylesheet" href="feedback.css">
+    <link rel="stylesheet" href="css/home.css">
+
+</head>
+
+<body>
+    <nav class = "navbar"></nav>
+
+    <h1>Contact Us</h1>
+    <form action="FAQs.html">
+     <h3>This Survey serves to improve the Experience and User interaction with our Online shop. </h3>
+     <h3>Your feedback helps us improve the User experience in the future. Thank you for your Input!</h3>
+        
+        <fieldset>
+            <legend>Is this the first time you have visited the website?</legend>
+            <label for="first_time_visit_yes">
+                <input type="radio" id="first_time_visit_yes" name="first-time-visit" value="yes">
+                yes</label>
+
+            <label for="first_time_visit_no">
+                <input type="radio" id="first_time_visit_no" name="first-time-visit" value="no">
+                no</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Did you make a purchase on our website?</legend>
+            <label for="first_time_visit_yes">
+                <input type="radio" id="purchase_yes" name="purchase" value="yes">
+                yes</label>
+
+            <label for="first_time_visit_no">
+                <input type="radio" id="purchase_no" name="purchase" value="no">
+                no</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Please tell us more about your interaction with our website.</legend>
+            <textarea id="first_time_visit_text" rows="5"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Did you find the products that you were looking for?</legend>
+            <label for="found_all">
+                <input type="radio" id="found_all" name="found-needed" value="all">
+                Yes, all of it</label>
+            <label for="found_some">
+                <input type="radio" id="found_some" name="found-needed" value="some">
+                Yes, some of it</label>
+            <label for="found_none">
+                <input type="radio" id="found_none" name="found-needed" value="no">
+                No, none of it</label>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>If you did <strong>not</strong> find any or all of what you were interested in buying, please tell us what you would like 
+                to see us sell on the website.</legend>
+
+            <textarea name="not-found" rows="5"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Please tell us how easy it was to browse over the website.</legend>
+            <label for="find-rate-1">
+                <input type="radio" id="find-rate-1" name="rate-find" value="1">
+                Very easy</label>
+
+            <label for="find-rate-2">
+                <input type="radio" id="find-rate-2" name="rate-find" value="2">
+                Easy</label>
+
+            <label for="find-rate-3">
+                <input type="radio" id="find-rate-3" name="rate-find" value="3">
+                Average</label>
+
+            <label for="find-rate-4">
+                <input type="radio" id="find-rate-4" name="rate-find" value="4">
+                Difficult</label>
+
+            <label for="find-rate-5">
+                <input type="radio" id="find-rate-5" name="rate-find" value="5">
+                Very Difficult</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>What is the overall impression of the site?</legend>
+
+            <table>
+                <table class="unstyledTable">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>Below Expectations</th>
+                    <th>Meets Expectations</th>
+                    <th>Exceeds Expectations</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Visually Appealing</td>
+                    <td><input type="radio" name="impression-professional" value="below"></td>
+                    <td><input type="radio" name="impression-professional" value="meet"></td>
+                    <td><input type="radio" name="impression-professional" value="exceed"></td>
+                </tr>
+                <tr>
+                    <td>Product Quality</td>
+                    <td><input type="radio" name="impression-informative" value="below"></td>
+                    <td><input type="radio" name="impression-informative" value="meet"></td>
+                    <td><input type="radio" name="impression-informative" value="exceed"></td>
+                </tr>
+                <tr>
+                    <td>Delivery Speed</td>
+                    <td><input type="radio" name="impression-visuallyPleasing" value="below"></td>
+                    <td><input type="radio" name="impression-visuallyPleasing" value="meet"></td>
+                    <td><input type="radio" name="impression-visuallyPleasing" value="exceed"></td>
+                </tr>
+            </tbody>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Suggestions to help us improve the website</legend>
+            <p>Please add any extra suggestions you have for improving the website. We welcome suggestions on specific areas for
+                improvements, features you would like to see added to the site.</p>
+            <textarea id="improving" rows="5"></textarea>
+        </fieldset>
+
+        <fieldset id="personal-info">
+            <legend>We would like to know a little bit about you</legend>
+
+            <label for="email">eMail
+                <input type="email" id="email" name="email" placeholder="user@example.com" required>
+            </label>
+
+            <label for="Name">Name
+                <input type="Name" id="homepage" name="homepage" placeholder="Name" required>
+            </label>
+
+            <label for="Number">Phone No.
+                <input type="number" id="birthday" name="Phone"placeholder="Optional">
+            </label>
+        </fieldset>
+        <button class="sendbutton">Send</button>
+        <br>
+        <br>
+        <br>
+    </div>
+    </form>
+</fieldset>
+
+
+<footer class="abc">
+
+</footer>
+<script src = "js/home.js"></script>
+<script src = "js/nav.js"></script>
+<script src = "js/footer.js"></script>
+</body>
+</html>
