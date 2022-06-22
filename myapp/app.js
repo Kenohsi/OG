@@ -1,3 +1,4 @@
+//loads all our different environment variables and sets them in process.env
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
 }
@@ -40,12 +41,14 @@ const initializePassport = require('./passport-config');
 const { json } = require('body-parser');
 const { count } = require('console');
 initializePassport(
+  //function for finding the user based on the email
   passport,
   email => users.find(user => user.email === email),
-  id => users.find(user => user.id === id)
+  id => users.find(user => user.id === id)//compares the IDs
   
 )
 
+//store our database in local var
 const users = []
 
 
@@ -56,15 +59,18 @@ const users = []
 
 app.engine('html', require('ejs').renderFile);
 // app.set('view-engine', 'html')
+//it´s telling our applic that we want to take our forms from e-mail
+//and passw and acces them inside our req var inside our post method
 app.use(express.urlencoded({ extended: false }))
 app.use(flash())
 app.use(session({
+  //environment var
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false
 }))
 app.use(passport.initialize())
-app.use(passport.session())
+app.use(passport.session())//store our var to be persisted across the entire session
 app.use(methodOverride('_method'))
 app.use(express.static(staticPath))
 app.use(express.json())
@@ -86,7 +92,7 @@ app.get('/login', checkNotAuthenticated, (req, res) => {
 })
 
 app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
-  successRedirect: '/',
+  successRedirect: '/',// goes back to homepage
   failureRedirect: '/login',
   failureFlash: true
 }))
@@ -132,9 +138,10 @@ app.get('/404',(req, res) =>{
 
 
 
-
+//asynchronous function
 app.post('/signup', checkNotAuthenticated, async (req, res) => {
   try {
+    //return after waiting for it
     const hashedPassword = await bcrypt.hash(req.body.password, 10)
 
     
