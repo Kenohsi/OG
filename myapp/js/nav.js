@@ -10,7 +10,7 @@ const createNav = () =>{
         </div>
         <a href = "#"><img src ="pictures/cart.png" alt=""></a>
     </div>
-</div>
+    </div>
     <ul class ="links-container">
     <li class = "link-item"><a href="shop.html" class="link">Shop</a></li>
          <li class = "link-item"><a href="main.html" class="link">About</a></li>
@@ -19,7 +19,8 @@ const createNav = () =>{
          <li class = "link-item"><a href="index.html" class="link">Einkaufswagen</a></li>
          <li class = "link-item"><a href="login.html" class="link">Login</a></li>
          <li class = "link-item"><a href="feedback.html" class="link">Contact Us!</a></li>
+         <li class = "link-item"><a href="feedback.html" class="link">Contact Us!</a></li>
     </ul>`;
-}
+};
 
 createNav();

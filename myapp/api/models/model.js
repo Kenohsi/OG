@@ -111,7 +111,7 @@ const Fruits = new Category("Fruits", "fruits");
 model.addCategory(Fruits);
 model.addProduct(Fruits, new Product("Watermelon", "pictures/watermelon.jpg", 2));
 model.addProduct(Fruits, new Product("Tomatoes", "pictures/Small_tomatoes.jpg", 2.5));
-model.addProduct(Fruits, new Product("Apples", "pictures/apple.jpg", 2));
+model.addProduct(Fruits, new Product("Apples", "pictures/apples.jpg", 2));
 model.addProduct(Fruits, new Product("Oranges", "pictures/oranges.jpg", 2.5));
 model.addProduct(Fruits, new Product("Bananas", "pictures/banana.jpg", 2.5));
 
