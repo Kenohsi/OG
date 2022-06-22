@@ -1,10 +1,9 @@
-if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').config()
-  }
+require('dotenv').config()
+  
   
   const fs = require('fs').promises;
   
-  const path = require('path');
+  const path = require('path')
   let staticPath = path.join(__dirname,"viewsForLB");
   const express = require('express')
   const app = express()
@@ -13,15 +12,17 @@ if (process.env.NODE_ENV !== 'production') {
   const flash = require('express-flash')
   const session = require('express-session')
   const methodOverride = require('method-override')
-  
+  const jwt = require('jsonwebtoken')
+
+
   var counter=0;
   
   
   
   
-  const initializePassport = require('./passport-config');
-  const { json } = require('body-parser');
-  const { count } = require('console');
+  const initializePassport = require('./passport-config')
+  const { json } = require('body-parser')
+  const { count } = require('console')
   initializePassport(
     passport,
     email => users.find(user => user.email === email),
@@ -33,8 +34,35 @@ if (process.env.NODE_ENV !== 'production') {
   
   
   
+  //////////////////////////////////
+//   const posts = [
+//     {
+//       username: 'Kyle',
+//       title: 'Post 1'
+//     },
+//     {
+//       username: 'Jim',
+//       title: 'Post 2'
+//     }
+//   ]
   
+//   app.get('/posts', authenticateToken, (req, res) => {
+//     res.json(posts.filter(post => post.username === req.user.name))
+//   })
   
+//   function authenticateToken(req, res, next) {
+//     const authHeader = req.headers['authorization']
+//     const token = authHeader && authHeader.split(' ')[1]
+//     if (token == null) return res.sendStatus(401)
+  
+//     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
+//       console.log(err)
+//       if (err) return res.sendStatus(403)
+//       req.user = user
+//       next()
+//     })
+//   }
+  /////////////////////////////////////
   
   
   app.engine('html', require('ejs').renderFile);
@@ -60,7 +88,6 @@ if (process.env.NODE_ENV !== 'production') {
     
   
   app.get('/', checkAuthenticated, (req, res) => {
-  
     res.sendFile(path.join(staticPath, "main.html"));
   })
   
@@ -85,12 +112,7 @@ if (process.env.NODE_ENV !== 'production') {
   app.get("/", (req, res) => {
     res.sendFile(path.join(staticPath, "login.html"));
   })
-  
-  app.get("/ajax", (req, res) => {
-    res.sendFile(path.join(staticPath, "ajax.html"));
-  })
-  
-  
+
   //signup route
   app.get('/signup', (req, res) => {
     res.sendFile(path.join(staticPath, "signup.html"));
@@ -110,17 +132,11 @@ if (process.env.NODE_ENV !== 'production') {
   //     console.log(req.body);
   //     res.json('data received');
   // })
-  
-  
-  
-  
-  
-  
+
   app.post('/signup', checkNotAuthenticated, async (req, res) => {
     try {
       const hashedPassword = await bcrypt.hash(req.body.password, 10)
-  
-      
+
       counter++
       users.push({
         id: Date.now().toString(),
@@ -139,115 +155,22 @@ if (process.env.NODE_ENV !== 'production') {
         }
     );
   
-   // var key = ;
-    //delete json[key];
-  
-  
-    
-  
-  
-  
-  
-    //  jsonSave= jsonSave.append(jsonData)
-      
-      
-  
-      //console.log(jsonParsed.persons[0].name);
-      //var jsonObj = JSON.parse(jsonData);
-  //console.log(jsonObj);
-  
-  
-  // stringify JSON Object
-  //var jsonContent = JSON.stringify(jsonObj);
-  //console.log(jsonContent);
-  
-  
-  
-  
-      
-      
-      
-  
-  
-  // stringify JSON Object
-  //var jsonContent = JSON.stringify(jsonObj);
-  //console.log(jsonContent);
-  
-  
-  
-  // await openFile(req.body.name,req.body.email,hashedPassword)
-  
-  
+
       res.redirect('/login')
     } catch {
       res.redirect('/signup')
     }  
-    // saveData(users);
-  
-    //console.log(jsonSave);
-  })
-  
-  
-  
-  
-  
-  
-  
-  // async function openFile(name, email, password) {
-  //   try {
-  //     // var jsonData = 'USER '+counter+': name: '+ name+' email: '+email+' password: '+password+'\\n';
-  //     var jsonData = 'USER ';
-  //     await fs.writeFile('file.json', jsonData);
-  //     fs.readFile('file.json');
-  //   } catch (error) {
-  //     console.error(`Got an error trying to write to a file: ${error.message}`);
-  //   }
-  // }
-  
-  // async function addUser(name, email, password) {
-  //   try {
-  //     const csvLine = `\n${name},${email},${password}`
-  //     await fs.writeFile('file.json', csvLine, { flag: 'a' });
-  //   } catch (error) {
-  //     console.error(`Got an error trying to write to a file: ${error.message}`);
-  //   }
-  // }
-  
-  // (async function () {
-  //   await openFile(req.body.name,req.body.email,hashedPassword)
-  //   //await addUser(req.body.name,req.body.email,hashedPassword);
-   
-  // })();
-  
+
+  })  
   
   const saveData = (users) =>{
   
-    // json data
-    // var jsonData = '{"users":[{"name":"users.name","email":"users.email"}';
-       //jsonData = JSON.stringify(users)
-    
     
       console.log(users);
       
-    
       }
       
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   app.delete('/logout', function(req, res, next) {
     req.logout(function(err) {
       if (err) { return next(err); }
