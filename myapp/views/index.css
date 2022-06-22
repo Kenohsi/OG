@@ -138,9 +138,7 @@ aside, .h2 {
 }
 
 @media (max-width: 642px) {
-    aside {
-        background-image: linear-gradient(to right, green, green)
-    }
+
 }
 
 @media (min-width: 642px) {
