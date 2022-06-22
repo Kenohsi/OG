@@ -1,5 +1,3 @@
-//Done with Christina Ifrim, Kenan Husic, Muhammad Taha Imran, Adam Ibragimov!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-/* A class representing a category of books. It holds all the books belonging to this category. */
 class Category {
     constructor(title, name) {
         this.name = name;
@@ -7,9 +5,6 @@ class Category {
     }
 }
 
-/* A class representing a book in one of the categories. It contains getters for the ids
- * that represent the book in the main content and in the shopping cart.
- */
 class Product {
     constructor(name, image, price) {
         this.name = name;
@@ -60,14 +55,11 @@ class Model {
             }
             throw new Error(`Unknown book category ${category}`)
         } 
-
         return category;
     }
-
     getProductsAsMap(category) {
         return this.products.get(this.resolveCategory(category));
     }
-
     getCategory(id) {
         for (const [ category, productsAsMap] of this.products.entries()) {
             const products = Array.from(productsAsMap.values());
@@ -75,10 +67,8 @@ class Model {
                 return category;
             }
         };
-
         return null;
     }
-
     getProduct(id) {
         if (typeof id !== "number") {
             throw new Error(`Given id must be an number, but is a ${typeof id}`);
@@ -90,19 +80,13 @@ class Model {
         if (category) {
             product = this.products.get(category).get(id);
         }
-
         return product;
     }
-
     createProduct(category, product) {
-        /* --- Task 2 ---
-         * Add the received book to the given category in the model and return it. */
         this.addProduct(category,product)
        return product;
     }
-
     updateProduct(id, product) {
-        /* --- Task 3 --- Update the book with the given id in the model */
         const target = this.getProduct(id);
         if(!target){
             throw new Error(`Product ${id} not found!`)
@@ -110,9 +94,7 @@ class Model {
         Object.assign(target,product);
         return target;
     }
-
     deleteProduct(id) {
-        /* --- Task 4 --- Delete the book with the given id from the model */
         let deleteProduct = false;
         
         const category = this.getCategory(id);
