@@ -4,8 +4,8 @@ if (process.env.NODE_ENV !== 'production') {
 
 const fs = require('fs').promises;
 
-const path = require('path');
-let staticPath = path.join(__dirname,"views");
+const path = require('path')
+let staticPath = path.join(__dirname,"views")
 const express = require('express')
 const app = express()
 const bcrypt = require('bcrypt')
@@ -103,8 +103,8 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(staticPath, "login.html"));
 })
 
-app.get("/ajax", (req, res) => {
-  res.sendFile(path.join(staticPath, "ajax.html"));
+app.get("/index", (req, res) => {
+  res.sendFile(path.join(staticPath, "index.html"));
 })
 
 
