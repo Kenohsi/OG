@@ -13,11 +13,8 @@ const passport = require('passport')
 const flash = require('express-flash')
 const session = require('express-session')
 const methodOverride = require('method-override')
-const path = require('path');
 const bodyParser = require('body-parser');
-const express = require('express');
-
-const Router = require('./api/routes/book-router');
+const Router = require('./api/routes/router.js');
 
 
 // const port = process.env.PORT ?? 3000;
