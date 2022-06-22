@@ -35,7 +35,7 @@ class Model {
 
     addProduct(category, product) {
         if (!this.products.get(category)) {
-            throw new Error(`Unknown book category ${category.name}`)
+            throw new Error(`Unknown category ${category.name}`)
         }
         product.id = Model.PRODUCT_ID++;
         this.getProductsAsMap(category).set(product.id, product);
@@ -53,7 +53,7 @@ class Model {
                     return _category;
                 }
             }
-            throw new Error(`Unknown book category ${category}`)
+            throw new Error(`Unknown category ${category}`)
         } 
         return category;
     }

@@ -6,7 +6,7 @@ const createFooter = () =>{
   <div class="footer-col-2">
    <p>Follow us on:</p>
   <ul>
-      <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+      <li><a href="https://www.face.com/" target="_blank">Facebook</a></li>
       <li><a href="https://www.twitter.com/" target="_blank">Twitter</a></li>
       <li><a href="https://www.Instagram.com/" target="_blank">Instagram</a></li><br><br>
   </ul>
