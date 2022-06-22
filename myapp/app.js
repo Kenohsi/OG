@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Parse JSON bodies (from requests)
 app.use(bodyParser.json()); 
 
-// Include the book routes
+// Include the routes
 app.use('/api', Router);
 
 var counter=0;

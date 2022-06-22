@@ -153,7 +153,7 @@ class Shop {
         new ElementCreator("article")
             .id(product.id)
             .append(new ElementCreator("h3").text(product.name))
-            .append(new ElementCreator("img").with("src", product.image).with("alt", "Image of '" + product.title + "'"))
+            .append(new ElementCreator("img").with("src", product.image).with("alt", "Image of '" + product.name + "'"))
             .append(new ElementCreator("p")
                 .append(new ElementCreator("label").text("Quantity:")
                     .append(selectCreator))

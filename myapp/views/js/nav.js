@@ -15,7 +15,7 @@ const createNav = () =>{
     </div>
     </div>
     <ul class ="links-container">
-    <li class = "link-item"><a href="shop.html" class="link">Shop</a></li>
+    <li class = "link-item"><a href="index.html" class="link">Shop</a></li>
          <li class = "link-item"><a href="main.html" class="link">About</a></li>
          <li class = "link-item"><a href="Order_Green_curency_convertor.html" class="link">Currency Converter</a></li>
          <li class = "link-item"><a href="FAQs.html" class="link">FAQs</a></li>
