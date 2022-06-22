@@ -1,6 +1,6 @@
 const model = require("../models/model");
-module.exports = new ProductController();
 
+module.exports = new ProductController();
 class ProductController {
     static MANDATORY = ["name", "image", "price"];
 
