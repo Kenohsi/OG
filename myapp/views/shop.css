@@ -53,13 +53,13 @@ html {
 
 
 .box {
-    position: left;
+    /* position: left; */
     padding-top: 15px; 
 }
   
   /* Bottom right text */
 .text {
-    position: left;
+    /* position: left; */
     left: 20px;
     right: 20px;
     background-color: white;
