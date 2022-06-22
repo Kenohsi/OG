@@ -13,6 +13,26 @@ const passport = require('passport')
 const flash = require('express-flash')
 const session = require('express-session')
 const methodOverride = require('method-override')
+const path = require('path');
+const bodyParser = require('body-parser');
+const express = require('express');
+
+const Router = require('./api/routes/book-router');
+
+
+// const port = process.env.PORT ?? 3000;
+
+// Serving static files from folder 'files'
+app.use(express.static(path.join(__dirname, 'files')));
+
+// Parse urlencoded bodies (for form data)
+app.use(bodyParser.urlencoded({ extended: true })); 
+
+// Parse JSON bodies (from requests)
+app.use(bodyParser.json()); 
+
+// Include the book routes
+app.use('/api', Router);
 
 var counter=0;
 
