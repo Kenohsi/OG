@@ -109,19 +109,19 @@ const model = new Model();
 
 const Fruits = new Category("Fruits", "fruits");
 model.addCategory(Fruits);
-model.addProduct(Fruits, new Product("Watermelon", "images/watermelon.jpg", 2));
-model.addProduct(Fruits, new Product("Tomatoes", "images/Small_tomatoes.jpg", 2.5));
-model.addProduct(Fruits, new Product("Apples", "images/apple.jpg", 2));
-model.addProduct(Fruits, new Product("Oranges", "images/oranges.jpg", 2.5));
-model.addProduct(Fruits, new Product("Bananas", "images/banana.jpg", 2.5));
+model.addProduct(Fruits, new Product("Watermelon", "pictures/watermelon.jpg", 2));
+model.addProduct(Fruits, new Product("Tomatoes", "pictures/Small_tomatoes.jpg", 2.5));
+model.addProduct(Fruits, new Product("Apples", "pictures/apple.jpg", 2));
+model.addProduct(Fruits, new Product("Oranges", "pictures/oranges.jpg", 2.5));
+model.addProduct(Fruits, new Product("Bananas", "pictures/banana.jpg", 2.5));
 
 
 
 const Veggie = new Category("Vegetables", "vegetables");
 model.addCategory(Veggie);
-model.addProduct(Veggie, new Product("Carrot", "images/Carrot.jpg", 3));
-model.addProduct(Veggie, new Product("Potatoes", "images/potatoes.jpg", 3));
-model.addProduct(Veggie, new Product("Cucumber", "images/Cucumber.jpg", 2.5));
-model.addProduct(Veggie, new Product("Onion", "images/onion.jpg", 2));
+model.addProduct(Veggie, new Product("Carrot", "pictures/Carrot.jpg", 3));
+model.addProduct(Veggie, new Product("Potatoes", "pictures/potatoes.jpg", 3));
+model.addProduct(Veggie, new Product("Cucumber", "pictures/Cucumber.jpg", 2.5));
+model.addProduct(Veggie, new Product("Onion", "pictures/onion.jpg", 2));
 
 module.exports = model;

@@ -130,7 +130,7 @@ main img {
 /* SHOPPING CART */
 aside {
     grid-area: a;
-    padding: 30px;
+   
     text-align: end;
 }
 aside, .h2 {
